@@ -8,7 +8,7 @@ Values here match the shipped code in `assets/css/style.css`, `assets/js/main.js
 
 ## 1. What the site is
 
-A single scrolling brand page for a Lucknow dessert brand with three shops. Its job is to make someone hungry, show them the whole menu, and send them to Zomato, Swiggy or a shop.
+A single scrolling brand page for a Lucknow dessert brand with three outlets. Its job is to make someone hungry, show them the whole menu, and send them to Zomato, Swiggy or an outlet.
 
 The product is a **Swaffle**: two crisp waffle halves with a molten filling, cut into a quarter-round wedge and served warm. Everything on the page comes from that object and the brand's own name:
 
@@ -120,7 +120,7 @@ One family: **Archivo** (variable, self-hosted, SIL OFL), using two axes: weight
 - **Alignment:** flush left, ragged right. Centre alignment only for the SWAFFLE word, the plate captions and the dictionary moment.
 - **Viewport units:** use `svh` for full-screen scenes so mobile browser bars don't cause jumps.
 - **Breakpoints:** `960px` (nav tightens) and `760px` (phone layout: single column, burger menu, stacked menu cards, no horizontal reel).
-- **Ground sequence down the page:** red → red → red → white (inside) → white (menu) → red fading to night (hours) → night (founders) → white (shops) → red (footer).
+- **Ground sequence down the page:** red → red → red → white (inside) → white (menu) → red fading to night (hours) → night (founders) → white (outlets) → red (footer).
 
 ---
 
@@ -137,7 +137,7 @@ Pinned scenes hold the page while the scroll drives an animation. Pin lengths ar
 | 5 | Menu `#menu` | white | reel length | Seven menu cards slide sideways (see §7.4). |
 | 6 | Hours `#hours` | red → night | 2.4 | A 24-hour round-waffle dial; the hand sweeps 11:00 → 02:00 and the pockets fill. |
 | 7 | Founders `#founders` | night | — | Names, the quote baking word by word, bio, the box label, three photos. |
-| 8 | Shops `#find` | white | — | Three shops as stops on one red line that draws itself. |
+| 8 | Outlets `#find` | white | — | Three outlets as stops on one red line that draws itself. |
 | 9 | Order `#order` | red | — | The wedge returns with sprinkles; order buttons, contact rows, the SWAFFLE word. |
 
 ---
@@ -191,8 +191,8 @@ A 24-hour clock drawn as a round waffle, with midnight at the top:
 - The hand sweeps from 11:00 as you scroll, and each pocket fills with chocolate as the hand passes it.
 - A large readout shows the time.
 
-### 7.8 Shop line
-The three shops as metro-style stops (34px square marks: white with a cocoa border and a red centre) on a 10px red line that draws itself on scroll. On desktop the line steps up and down between stops; on phones it runs vertically.
+### 7.8 Outlet line
+The three outlets as metro-style stops (34px square marks: white with a cocoa border and a red centre) on a 10px red line that draws itself on scroll. On desktop the line steps up and down between stops; on phones it runs vertically.
 
 ### 7.9 Callouts (inside scene)
 Leader lines are drawn from projected points on the 3D model to text labels: Layer 1 of 3 (the lid), 2 of 3 (the filling), 3 of 3 (the base), and the finish. Each line has a red dot at the model end and draws in as its label appears.
@@ -266,7 +266,7 @@ The site speaks the way a well-informed person behind the counter would: plainly
 ### Do
 - Use the brand's own names: Swaffle, filling, Fab 4 boxes, Swissfully Red, Dark Obsession. Use their category and item names exactly, apart from fixing obvious typos (Ferrero, not "Fererro").
 - Describe what something is: "Red velvet-style batter with a white cream filling."
-- Use facts from the brand: 100% veg, eggless batter, open 11:00 to 02:00, three shops.
+- Use facts from the brand: 100% veg, eggless batter, open 11:00 to 02:00, three outlets.
 - Use sentence case, short sentences and active verbs. Buttons say exactly what happens ("Order on Zomato", "Get directions", "Copy").
 
 ### Don't
@@ -314,7 +314,7 @@ The founders' quote is the one place their own punctuation stays as written:
 |---|---|
 | Keep the logo red `#DE301F` as the only brand red | Kept |
 | Steam rising off the wedge, and icing sugar falling like snow over the hero | Tried, then **reverted at the client's request**. The floating chocolate sprinkles stay. |
-| Shop map plotted from GPS pins with distances and a km scale | Tried, then **reverted at the client's request**. The metro-style shop line stays. |
+| Outlet map plotted from GPS pins with distances and a km scale | Tried, then **reverted at the client's request**. The metro-style outlet line stays. |
 | Italic quote with a red bar | Replaced by the word-by-word "baking" quote, full width |
 | Menu as accordion rows, then as tabs with a preview | Replaced by the seven-card sideways reel with plates |
 | Single icon row (Eggless / Pressed fresh / …) | Replaced by the box label |
@@ -339,7 +339,7 @@ The founders' quote is the one place their own punctuation stays as written:
 |---|---|
 | `index.html` | All content and copy |
 | `assets/css/style.css` | Tokens (§3–5) and component styles |
-| `assets/js/main.js` | Scroll choreography, menu reel, dial, shop line, `FLAVORS`, `RIG` |
+| `assets/js/main.js` | Scroll choreography, menu reel, dial, outlet line, `FLAVORS`, `RIG` |
 | `assets/js/scene.js` | Compiled 3D scene (edit `_source/scene.src.js`, then `npm run build` in `_source/`) |
 | `assets/js/vendor/` | GSAP, Lenis, Motion |
 | `assets/fonts/` | Archivo (latin and latin-ext, upright and italic) |

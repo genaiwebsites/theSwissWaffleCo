@@ -30,7 +30,7 @@ export default function Home() {
           <a href="#menu">Menu</a>
           <a href="#hours">Hours</a>
           <a href="#about">About</a>
-          <a href="#find">Shops</a>
+          <a href="#find">Outlets</a>
           <a className="go" href="#order">
             Order
           </a>
@@ -62,7 +62,7 @@ export default function Home() {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#find">Shops</a>
+            <a href="#find">Outlets</a>
           </li>
           <li>
             <a href="#order">Order</a>
@@ -172,7 +172,7 @@ export default function Home() {
           </div>
           <ul className="hero-meta">
             <li>
-              <span className="k">Shops</span>
+              <span className="k">Outlets</span>
               <span className="v">Aliganj, Indira Nagar, Gomti Nagar</span>
             </li>
             <li>
@@ -1107,7 +1107,7 @@ export default function Home() {
               </h2>
               <p className="body">
                 The Swiss Waffle Co. started with a late-night dessert craving, so the irons stay
-                on until 2&nbsp;a.m. every day, at all three shops.
+                on until 2&nbsp;a.m. every day, at all three outlets.
               </p>
               <dl className="hours-dl">
                 <div>
@@ -1131,7 +1131,7 @@ export default function Home() {
               </p>
               <figcaption>
                 The day as a round waffle, midnight at the top. The missing slice is when the
-                shops are shut.
+                outlets are shut.
               </figcaption>
             </figure>
           </div>
@@ -1162,7 +1162,7 @@ export default function Home() {
             <div className="f-copy">
               <p className="body">
                 The Swiss Waffle Co. began with their own late-night dessert cravings in Lucknow.
-                They wanted a shop that took texture seriously, used real fillings and kept prices
+                They wanted an outlet that took texture seriously, used real fillings and kept prices
                 within reach.
               </p>
               <div className="label" role="group" aria-labelledby="label-h">
@@ -1243,7 +1243,7 @@ export default function Home() {
         <section id="find" className="sec find is-sugar on-sugar" aria-labelledby="find-h">
           <header className="find-head">
             <h2 id="find-h" className="h2">
-              Three shops. One line.
+              Three outlets. One line.
             </h2>
             <p>All three are open every day from 11:00 to 02:00. Tap a stop for directions.</p>
           </header>
@@ -1321,7 +1321,7 @@ export default function Home() {
               Order a Swaffle.
             </h2>
             <p className="lede">
-              On Zomato or Swiggy, or pick one up warm at any of the three shops.
+              On Zomato or Swiggy, or pick one up warm at any of the three outlets.
             </p>
             <div className="ctas">
               <a

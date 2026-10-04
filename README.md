@@ -6,7 +6,7 @@ A pixel-perfect Next.js implementation of The Swiss Waffle Co. website featuring
 - Multi-scene scroll choreography & pinned timeline sequences (GSAP & ScrollTrigger)
 - Interactive 24-hour round waffle dial
 - 7-section horizontal sideways menu reel with plate hover previews
-- Dynamic SVG transit route drawing between shops
+- Dynamic SVG transit route drawing between outlets
 - Self-hosted Archivo variable typography
 
 ---
