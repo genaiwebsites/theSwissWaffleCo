@@ -344,8 +344,8 @@
     // hero entrance
     if (!REDUCE) {
       SplitText.create('.hero-title .ln', {
-        type: 'chars', mask: 'chars',
-        onSplit(self) { return gsap.from(self.chars, { yPercent: 108, duration: 1.25, ease: 'expo.out', stagger: 0.028, delay: 0.1 }); }
+        type: 'lines', mask: 'lines', linesClass: 'hero-ln-inner',
+        onSplit(self) { return gsap.from(self.lines, { yPercent: 108, duration: 1.25, ease: 'expo.out', stagger: 0.12, delay: 0.1 }); }
       });
       gsap.from('.hero-body > *, .hero-meta li', { y: 22, opacity: 0, duration: 1, ease: 'expo.out', stagger: 0.08, delay: 0.55 });
       gsap.to(RIG, { intro: 1, duration: 2.1, ease: 'expo.out', delay: 0.25 });

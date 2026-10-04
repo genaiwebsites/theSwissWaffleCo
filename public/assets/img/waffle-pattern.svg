@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <!-- Baked waffle ridge lattice: subtle toasted honey/caramel lattice -->
+    <linearGradient id="ridge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF7824" stop-opacity="0.32"/>
+      <stop offset="50%" stop-color="#9E5612" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#7B3704" stop-opacity="0.42"/>
+    </linearGradient>
+
+    <!-- Pocket base fill: warm golden batter without harsh white hotspots -->
+    <linearGradient id="pocket-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5DE" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#FCE1A8" stop-opacity="0.48"/>
+      <stop offset="85%" stop-color="#F4C778" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#EAA646" stop-opacity="0.48"/>
+    </linearGradient>
+
+    <!-- Pocket 3D bevel: delicate upper-left shadow & bottom-right soft sheen -->
+    <linearGradient id="pocket-depth" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#481A00" stop-opacity="0.22"/>
+      <stop offset="35%" stop-color="#481A00" stop-opacity="0.04"/>
+      <stop offset="70%" stop-color="#FFF8E8" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#FFF8E8" stop-opacity="0.38"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ridge background lattice -->
+  <rect width="24" height="24" fill="url(#ridge)"/>
+
+  <!-- Center waffle pocket (diamond rotated 45°) -->
+  <g transform="translate(12, 12)">
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-base)"/>
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-depth)"/>
+  </g>
+
+  <!-- Four corner waffle pockets for seamless tile repeat -->
+  <g transform="translate(0, 0)">
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-base)"/>
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-depth)"/>
+  </g>
+  <g transform="translate(24, 0)">
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-base)"/>
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-depth)"/>
+  </g>
+  <g transform="translate(0, 24)">
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-base)"/>
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-depth)"/>
+  </g>
+  <g transform="translate(24, 24)">
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-base)"/>
+    <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" transform="rotate(45)" fill="url(#pocket-depth)"/>
+  </g>
+</svg>

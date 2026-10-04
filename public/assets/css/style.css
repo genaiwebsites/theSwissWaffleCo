@@ -231,9 +231,26 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero-main{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(22px,3vw,40px);padding-bottom:clamp(24px,4svh,48px)}
 .hero-title{
   font-family:var(--display);font-weight:900;font-stretch:62%;
-  font-size:var(--t-mega);line-height:.8;letter-spacing:-.006em;text-transform:uppercase;
+  font-size:var(--t-mega);line-height:.8;letter-spacing:0.012em;text-transform:uppercase;
+  color:var(--sugar);
+  filter:drop-shadow(0 0 1px rgba(60,20,4,.55)) drop-shadow(0 2px 6px rgba(35,10,3,.4)) drop-shadow(0 12px 28px rgba(35,10,3,.28));
 }
 .hero-title .ln{display:block}
+.hero-title .ln,
+.hero-title .hero-ln-inner,
+.hero-title .char,
+.hero-title [class*="char"]{
+  display:block;
+  background-image:
+    url('/assets/img/waffle-pattern.svg'),
+    linear-gradient(180deg, #FFFFFF 0%, #FFF8EA 20%, #F9DB9B 60%, #EAA842 100%);
+  background-size:24px 24px, 100% 100%;
+  background-repeat:repeat, no-repeat;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
 .hero-body{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 48px}
 .hero-body .lede{max-width:40ch}
 .hero-meta{
@@ -546,6 +563,7 @@ button.mci:hover i,button.mci[aria-current="true"] i{transform:scale(1.6)}
   .hero{padding-top:calc(var(--nav-h) + 46svh)}
   #slot-hero{left:0;right:0;margin:auto;top:calc(var(--nav-h) - 1svh);width:min(100%,92vw);height:48svh}
   .hero-title{font-size:clamp(56px,17.4vw,140px)}
+  .hero-title .ln, .hero-title .hero-ln-inner, .hero-title .char, .hero-title [class*="char"]{background-size:18px 18px, 100% 100%}
   .ridges::before{background-size:calc(100% / 6) 100%}
   .hero-meta{grid-template-columns:1fr}
   .hero-meta li{flex-direction:row;justify-content:space-between;padding:12px 0}
