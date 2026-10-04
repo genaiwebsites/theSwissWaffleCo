@@ -29,6 +29,7 @@ export default function Home() {
           <a href="#inside">Inside a Swaffle</a>
           <a href="#menu">Menu</a>
           <a href="#hours">Hours</a>
+          <a href="#about">About</a>
           <a href="#find">Shops</a>
           <a className="go" href="#order">
             Order
@@ -56,6 +57,9 @@ export default function Home() {
           </li>
           <li>
             <a href="#hours">Hours</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
           </li>
           <li>
             <a href="#find">Shops</a>
@@ -117,7 +121,7 @@ export default function Home() {
 
       <main>
         {/* 1 · hero */}
-        <section id="top" className="sec hero is-red ridges">
+        <section id="top" className="sec hero is-red">
           <div id="slot-hero" className="slot">
             <img
               className="gl-fallback"
@@ -174,13 +178,6 @@ export default function Home() {
             <li>
               <span className="k">Hours</span>
               <span className="v">Every day, 11:00 to 02:00</span>
-            </li>
-            <li className="cue">
-              <span className="k">Scroll</span>
-              <span className="v">
-                <i className="cue-line" />
-                See what’s inside
-              </span>
             </li>
           </ul>
         </section>
@@ -1140,8 +1137,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 7 · founders */}
-        <section id="founders" className="sec founders is-night" aria-labelledby="f-h">
+        {/* 7 · founders / about */}
+        <section id="about" className="sec founders is-night" aria-labelledby="f-h">
+          <div id="founders" style={{ position: "absolute", top: 0, left: 0 }} aria-hidden="true" />
           <header className="f-head">
             <h2 id="f-h" className="h2 f-names">
               Ankit Agarwal &amp; Paridhi Bathwal
@@ -1152,8 +1150,9 @@ export default function Home() {
           <figure className="pquote">
             <blockquote>
               <p className="pq">
-                “We didn’t just want to make waffles. We wanted to make people smile — one golden,
-                crispy bite at a time.”
+                “We didn’t just want to make waffles.<br className="br-desk" />
+                We wanted to make people smile -<br className="br-desk" />
+                One golden, crispy bite at a time.”
               </p>
             </blockquote>
             <figcaption>Ankit and Paridhi, on why they started</figcaption>
@@ -1312,7 +1311,7 @@ export default function Home() {
       </main>
 
       {/* 9 · order */}
-      <footer id="order" className="sec order is-red ridges" aria-labelledby="order-h">
+      <footer id="order" className="sec order is-red" aria-labelledby="order-h">
         <div id="slot-order" className="slot">
           <img className="gl-fallback" src="/assets/img/social1.webp" alt="" />
         </div>

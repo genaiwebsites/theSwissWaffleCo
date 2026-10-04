@@ -78,10 +78,53 @@ html{color-scheme:light}
   color-scheme:light;
 }
 
-html{-webkit-text-size-adjust:100%}
+html{
+  -webkit-text-size-adjust:100%;
+}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
 .lenis.lenis-stopped{overflow:hidden}
+
+/* Custom sleek scrollbar matching menu cocoa */
+::-webkit-scrollbar,
+*::-webkit-scrollbar{
+  width:10px;
+  height:10px;
+}
+::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb{
+  background-color:var(--cocoa);
+  border-radius:9999px;
+  border:2px solid transparent;
+  background-clip:padding-box;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.12);
+  transition:background-color .2s ease;
+}
+::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover{
+  background-color:#4A2010;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+::-webkit-scrollbar-thumb:active,
+*::-webkit-scrollbar-thumb:active{
+  background-color:var(--night);
+}
+::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-corner{
+  background:transparent;
+}
+
+/* Firefox standard scrollbar */
+@supports (-moz-appearance: none){
+  *{
+    scrollbar-width:thin;
+    scrollbar-color:var(--cocoa) transparent;
+  }
+}
 body{
   margin:0;background:var(--red);color:var(--sugar);
   font-family:var(--text);font-size:var(--t-md);line-height:1.55;
@@ -174,12 +217,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .no-gl .gl-fallback{display:block}
 .no-gl #gl,.no-gl .callouts{display:none}
 
-/* ---------- ridges (grid rules on red) ---------- */
-.ridges::before{
-  content:"";position:absolute;top:0;bottom:0;left:var(--gut);right:var(--gut);
-  background:linear-gradient(90deg,var(--rule-red) 1px,transparent 1px) 0 0/calc(100% / 12) 100%;
-  border-right:1px solid var(--rule-red);pointer-events:none;
-}
+/* ---------- ridges (disabled) ---------- */
+.ridges::before{display:none}
 .sec{position:relative;padding-inline:var(--gut)}
 .is-red{background:var(--red);color:var(--sugar)}
 .is-sugar{background:var(--sugar);color:var(--cocoa)}
@@ -198,7 +237,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .hero-body{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 48px}
 .hero-body .lede{max-width:40ch}
 .hero-meta{
-  position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
   border-top:1px solid var(--rule-red);font-size:var(--t-sm);
 }
 .hero-meta li{display:flex;flex-direction:column;gap:2px;padding:16px 16px 20px 0}
@@ -429,6 +468,7 @@ button.mci:hover i,button.mci[aria-current="true"] i{transform:scale(1.6)}
   font-size:clamp(34px,5.1vw,92px);line-height:.96;letter-spacing:-.01em;text-indent:-.4em;text-wrap:pretty;
 }
 .pq div{text-indent:0;text-align:left}
+.br-desk{display:block}
 .pquote figcaption{font-size:var(--t-sm);opacity:.8}
 .f-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:stretch}
 .f-copy{display:grid;gap:8px;align-content:start}
@@ -551,6 +591,7 @@ button.mci:hover i,button.mci[aria-current="true"] i{transform:scale(1.6)}
   .mc-items{grid-template-columns:1fr}
   .midx{display:none}
   .pq{font-size:clamp(30px,8.6vw,48px);text-indent:0}
+  .br-desk{display:none}
   .f-photos{grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;min-height:0}
   .fp1{grid-column:1 / -1;grid-row:1;aspect-ratio:4/3}
   .fp2{grid-column:1;grid-row:2;aspect-ratio:1}
