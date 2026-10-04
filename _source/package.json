@@ -1,0 +1,11 @@
+{
+  "name": "swiss-waffle-scene",
+  "private": true,
+  "scripts": {
+    "build": "esbuild scene.src.js --bundle --format=iife --minify --target=es2019 --legal-comments=none --outfile=../public/assets/js/scene.js"
+  },
+  "devDependencies": {
+    "three": "0.170.0",
+    "esbuild": "0.24.0"
+  }
+}
