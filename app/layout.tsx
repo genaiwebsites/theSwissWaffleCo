@@ -36,6 +36,15 @@ export default function RootLayout({
         <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        <noscript>
+          <style>{`.hero-title{opacity:1!important;visibility:visible!important}`}</style>
+        </noscript>
+        <script src="/assets/js/vendor/gsap.min.js" defer></script>
+        <script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
+        <script src="/assets/js/vendor/SplitText.min.js" defer></script>
+        <script src="/assets/js/vendor/DrawSVGPlugin.min.js" defer></script>
+        <script src="/assets/js/vendor/lenis.min.js" defer></script>
+        <script src="/assets/js/vendor/motion.js" defer></script>
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>

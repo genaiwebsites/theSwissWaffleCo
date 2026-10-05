@@ -1,6 +1,22 @@
-import ScriptsLoader from "./ScriptsLoader";
+"use client";
+
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    function loadScript(src: string) {
+      if (document.querySelector(`script[data-src="${src}"]`)) return;
+      const s = document.createElement("script");
+      s.src = src;
+      s.setAttribute("data-src", src);
+      s.async = false;
+      document.body.appendChild(s);
+    }
+
+    loadScript("/assets/js/main.js");
+    loadScript("/assets/js/scene.js");
+  }, []);
+
   return (
     <>
       <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
@@ -1395,8 +1411,6 @@ export default function Home() {
           <a href="#top">Back to top</a>
         </div>
       </footer>
-
-      <ScriptsLoader />
     </>
   );
 }

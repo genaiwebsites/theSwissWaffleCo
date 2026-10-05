@@ -38,9 +38,8 @@ npm run start
 
 ```
 ├── app/
-│   ├── layout.tsx         # Root layout, metadata, viewport, stylesheet links
-│   ├── page.tsx           # Complete page markup & all SVG symbols
-│   └── ScriptsLoader.tsx  # Client loader for vendor libraries, main script & 3D scene
+│   ├── layout.tsx         # Root layout, metadata, viewport, deferred scripts & stylesheet
+│   └── page.tsx           # Complete page markup & all SVG symbols
 ├── public/
 │   ├── assets/
 │   │   ├── css/style.css  # Brand styling & variable font settings

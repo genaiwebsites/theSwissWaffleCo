@@ -1,4 +1,7 @@
 (() => {
+  if (window.__MAIN_INITIALIZED__) return;
+  window.__MAIN_INITIALIZED__ = true;
+
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const SVG = 'http://www.w3.org/2000/svg';
@@ -342,13 +345,41 @@
     measureWord(); routeTransit(); fitMega();
 
     // hero entrance
+    const heroTitle = $('.hero-title');
     if (!REDUCE) {
-      SplitText.create('.hero-title .ln', {
-        type: 'lines', mask: 'lines', linesClass: 'hero-ln-inner',
-        onSplit(self) { return gsap.from(self.lines, { yPercent: 108, duration: 1.25, ease: 'expo.out', stagger: 0.12, delay: 0.1 }); }
-      });
+      if (window.SplitText) {
+        try {
+          SplitText.create('.hero-title .ln', {
+            type: 'lines',
+            mask: 'lines',
+            linesClass: 'hero-ln-inner',
+            onSplit(self) {
+              if (heroTitle) heroTitle.classList.add('is-ready');
+              return gsap.from(self.lines, {
+                yPercent: 108,
+                duration: 1.25,
+                ease: 'expo.out',
+                stagger: 0.12,
+                delay: 0.08
+              });
+            }
+          });
+        } catch (err) {
+          console.warn('SplitText error:', err);
+          if (heroTitle) heroTitle.classList.add('is-ready');
+        }
+      } else {
+        if (heroTitle) heroTitle.classList.add('is-ready');
+      }
+      setTimeout(() => {
+        if (heroTitle && !heroTitle.classList.contains('is-ready')) {
+          heroTitle.classList.add('is-ready');
+        }
+      }, 1500);
       gsap.from('.hero-body > *, .hero-meta li', { y: 22, opacity: 0, duration: 1, ease: 'expo.out', stagger: 0.08, delay: 0.55 });
       gsap.to(RIG, { intro: 1, duration: 2.1, ease: 'expo.out', delay: 0.25 });
+    } else {
+      if (heroTitle) heroTitle.classList.add('is-ready');
     }
 
     // headings outside the pinned scenes rise out of their own line masks
