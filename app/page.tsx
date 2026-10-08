@@ -1270,7 +1270,16 @@ export default function Home() {
             </svg>
             <ol className="stations">
               <li className="st">
-                <span className="st-mark" aria-hidden="true" />
+                <span className="st-mark" aria-hidden="true">
+                  <img
+                    className="st-mark-img"
+                    src="/assets/img/waffle-cart-1024.png"
+                    alt=""
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Aliganj</h3>
                 <p>
                   Plot 332, Sitapur Road Yojna, Sector A, Jankipuram, opposite KFC and Pizza Hut.
@@ -1288,7 +1297,16 @@ export default function Home() {
                 </a>
               </li>
               <li className="st">
-                <span className="st-mark" aria-hidden="true" />
+                <span className="st-mark" aria-hidden="true">
+                  <img
+                    className="st-mark-img"
+                    src="/assets/img/waffle-cart-1024.png"
+                    alt=""
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Indira Nagar</h3>
                 <p>
                   Ground floor, B-1080, Indira Nagar Main Road, B Block. Lucknow 226016
@@ -1305,7 +1323,16 @@ export default function Home() {
                 </a>
               </li>
               <li className="st">
-                <span className="st-mark" aria-hidden="true" />
+                <span className="st-mark" aria-hidden="true">
+                  <img
+                    className="st-mark-img"
+                    src="/assets/img/waffle-cart-1024.png"
+                    alt=""
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                  />
+                </span>
                 <h3>Gomti Nagar</h3>
                 <p>
                   1/703 Silver Estate, near Gomti Nagar Bypass Road, Vishal Khand 1. Lucknow 226010

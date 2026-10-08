@@ -534,8 +534,30 @@ button.mci:hover i,button.mci[aria-current="true"] i{transform:scale(1.6)}
 .stations{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gut)}
 .st{display:grid;gap:12px;align-content:start;padding-top:0}
 .st:nth-child(2){margin-top:96px}
-.st-mark{width:34px;height:34px;background:var(--sugar);border:5px solid var(--cocoa);position:relative;z-index:1;margin-bottom:10px}
-.st-mark::after{content:"";position:absolute;inset:6px;background:var(--red)}
+.st-mark{
+  width:clamp(68px,5.5vw,84px);
+  height:clamp(68px,5.5vw,84px);
+  position:relative;
+  z-index:1;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.st-mark-img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 6px 14px rgba(42,18,9,.12));
+  transition:transform .3s var(--ease),filter .3s var(--ease);
+  user-select:none;
+  -webkit-user-drag:none;
+}
+.st:hover .st-mark-img{
+  transform:translateY(-4px) scale(1.06);
+  filter:drop-shadow(0 10px 20px rgba(42,18,9,.18));
+}
 .st h3{font-family:var(--display);font-weight:800;font-stretch:75%;font-size:clamp(32px,3vw,48px);line-height:.95}
 .st p{color:var(--muted);font-size:var(--t-sm);max-width:34ch}
 .st a{font-weight:600;font-size:var(--t-sm);display:inline-flex;align-items:center;gap:8px;color:var(--red-ink);text-underline-offset:3px;margin-top:4px}
@@ -640,10 +662,10 @@ button.mci:hover i,button.mci[aria-current="true"] i{transform:scale(1.6)}
   .label{padding:16px 16px 12px}
   .label dl>div{grid-template-columns:92px minmax(0,1fr)}
 
-  .stations{grid-template-columns:1fr;gap:44px}
+  .stations{grid-template-columns:1fr;gap:48px}
   .st:nth-child(2){margin-top:0}
-  .st{grid-template-columns:34px minmax(0,1fr);column-gap:18px;row-gap:8px}
-  .st-mark{grid-row:1 / span 3;margin-bottom:0}
+  .st{grid-template-columns:64px minmax(0,1fr);column-gap:20px;row-gap:8px;align-items:start}
+  .st-mark{grid-row:1 / span 3;margin-bottom:0;width:64px;height:64px;align-self:start}
   .st>*:not(.st-mark){grid-column:2}
 
   .order-grid{grid-template-columns:1fr}

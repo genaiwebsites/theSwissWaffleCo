@@ -509,7 +509,7 @@
 
       // 8 · the line between the outlets draws itself
       gsap.fromTo(tDraw, { drawSVG: '0%' }, { drawSVG: '100%', ease: 'none', scrollTrigger: { trigger: transit, start: 'top 78%', end: 'bottom 60%', scrub: true, invalidateOnRefresh: true } });
-      gsap.fromTo(marks, { scale: 0.4, rotation: -45 }, { scale: 1, rotation: 0, duration: 0.8, ease: 'expo.out', stagger: 0.15, scrollTrigger: { trigger: transit, start: 'top 78%', once: true } });
+      gsap.fromTo(marks, { scale: 0.35, y: 16, autoAlpha: 0 }, { scale: 1, y: 0, autoAlpha: 1, duration: 0.85, ease: 'back.out(1.5)', stagger: 0.15, scrollTrigger: { trigger: transit, start: 'top 78%', once: true } });
 
       // 9 · order: the wedge comes back, the word spreads like batter in the iron
       const ot = gsap.timeline({ scrollTrigger: { trigger: '#order', start: 'top bottom', end: 'top top', scrub: true } });
