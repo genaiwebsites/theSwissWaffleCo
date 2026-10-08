@@ -62,6 +62,8 @@ html{color-scheme:light}
   --cream:#F6E7D4;      /* raw batter, menu card */
   --waffle-deep:#B0682A;
   --waffle-edge:#7E3D12;
+  --swiggy:#FC8019;     /* Swiggy brand orange */
+  --swiggy-hover:#E57213;
 
   --display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
   --text:"Archivo","Helvetica Neue",Arial,sans-serif;
@@ -170,6 +172,18 @@ ul,ol{margin:0;padding:0;list-style:none}
 .on-sugar .btn-solid{background:var(--red);border-color:var(--red);color:var(--sugar)}
 .on-sugar .btn-line{color:var(--cocoa)}
 .on-sugar .btn-line:hover{background:rgba(42,18,9,.06)}
+.btn-swiggy,
+.on-sugar .btn-swiggy{
+  background:var(--swiggy);
+  border-color:var(--swiggy);
+  color:var(--sugar);
+}
+.btn-swiggy:hover,
+.on-sugar .btn-swiggy:hover{
+  background:var(--swiggy-hover);
+  border-color:var(--swiggy-hover);
+  color:var(--sugar);
+}
 
 /* ---------- nav ---------- */
 .nav{

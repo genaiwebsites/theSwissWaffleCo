@@ -173,7 +173,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  className="btn btn-line"
+                  className="btn btn-swiggy"
                   href="https://www.swiggy.com/menu/1275124?source=sharing"
                   target="_blank"
                   rel="noopener"
@@ -1100,7 +1100,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                className="btn btn-line"
+                className="btn btn-swiggy"
                 href="https://www.swiggy.com/menu/1275124?source=sharing"
                 target="_blank"
                 rel="noopener"
@@ -1379,7 +1379,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                className="btn btn-line"
+                className="btn btn-swiggy"
                 href="https://www.swiggy.com/menu/1275124?source=sharing"
                 target="_blank"
                 rel="noopener"

@@ -49,6 +49,7 @@ All colours are CSS custom properties on `:root`. Components read tokens and nev
 | `--gold` | `#E3A44E` | Golden crust. "Stuffed" menu card. |
 | `--cream` | `#F6E7D4` | Raw batter. "Ice cream" menu card. |
 | `--waffle` / `--waffle-deep` / `--waffle-edge` | `#D8913F` / `#B0682A` / `#7E3D12` | Hours dial only: baked surface, pockets, rim. |
+| `--swiggy` / `--swiggy-hover` | `#FC8019` / `#E57213` | Swiggy brand orange for order CTAs across all sections. |
 | `--muted` | `#6E5A51` | Secondary text on white. |
 | `--veg` | `#1E8A3C` | The green veg mark only. |
 | `--rule` | `rgba(42,18,9,.14)` | Hairlines on white. |
@@ -152,6 +153,7 @@ Pinned scenes hold the page while the scroll drives an animation. Pin lengths ar
 ### 7.2 Buttons
 - `.btn` is 54px tall, 22px side padding, 15px/600 type, square, with a 1.5px border and an outward-arrow icon for external links.
 - On red: `.btn-solid` is white with red text, `.btn-line` is white outline. On white (`.on-sugar`): solid is red, line is cocoa outline.
+- `.btn-swiggy` is Swiggy brand orange (`#FC8019`, hover `#E57213`) with white text and border across all section backgrounds.
 - Hover adds a 4px inner bottom shadow. Press runs a Motion spring (scale .95, see §8.3). Buttons never move on hover.
 
 ### 7.3 Category pill and veg mark
