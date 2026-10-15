@@ -1,28 +1,47 @@
 import type { Metadata, Viewport } from "next";
 
+const siteUrl = "https://www.theswisswaffle.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://theswisswaffle.co"),
+  metadataBase: new URL(siteUrl),
   title: "The Swiss Waffle Co. — Layered Swissfully",
   description:
     "Layered Swissfully. Two crisp waffle halves with a molten filling, cut into a wedge and served warm in Lucknow until 2 a.m.",
   icons: {
     icon: "/assets/favicon.svg",
-    apple: "/assets/apple-touch-icon.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://theswisswaffle.co",
+    url: siteUrl,
     siteName: "The Swiss Waffle Co.",
     title: "The Swiss Waffle Co. — Layered Swissfully",
     description:
       "Layered Swissfully. Two crisp waffle halves with a molten filling, cut into a wedge and served warm in Lucknow until 2 a.m.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: `${siteUrl}/opengraph-image.png`,
+        secureUrl: `${siteUrl}/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: "The Swiss Waffle Co.",
+        alt: "The Swiss Waffle Co. — Layered Swissfully",
+        type: "image/png",
+      },
+      {
+        url: `${siteUrl}/opengraph-image.jpg`,
+        secureUrl: `${siteUrl}/opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "The Swiss Waffle Co. — Layered Swissfully",
+        type: "image/jpeg",
+      },
+      {
+        url: `${siteUrl}/square-logo.png`,
+        secureUrl: `${siteUrl}/square-logo.png`,
+        width: 600,
+        height: 600,
+        alt: "The Swiss Waffle Co. Logo",
         type: "image/png",
       },
     ],
@@ -34,10 +53,10 @@ export const metadata: Metadata = {
       "Layered Swissfully. Two crisp waffle halves with a molten filling, cut into a wedge and served warm in Lucknow until 2 a.m.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: `${siteUrl}/opengraph-image.png`,
         width: 1200,
         height: 630,
-        alt: "The Swiss Waffle Co.",
+        alt: "The Swiss Waffle Co. — Layered Swissfully",
       },
     ],
   },
@@ -59,7 +78,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="image_src" href="https://www.theswisswaffle.com/opengraph-image.png" />
+        <meta property="og:image:secure_url" content="https://www.theswisswaffle.com/opengraph-image.png" />
         <link rel="stylesheet" href="/assets/css/style.css" />
         <noscript>
           <style>{`.hero-title{opacity:1!important;visibility:visible!important}`}</style>
