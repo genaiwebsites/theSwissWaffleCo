@@ -131,6 +131,8 @@
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     sheet.hidden = !open;
+    docEl.style.overflow = open ? 'hidden' : '';
+    document.body.style.overflow = open ? 'hidden' : '';
     if (lenis) open ? lenis.stop() : lenis.start();
     if (open && !REDUCE) gsap.from('.sheet li', { yPercent: 50, opacity: 0, stagger: 0.05, duration: 0.7, ease: 'expo.out' });
   }
@@ -219,7 +221,7 @@
 
   // ---------- spring press on everything you can tap ----------
   if (MO && MO.press && !REDUCE) {
-    MO.press('.btn, .chip, .copy, .burger, .midx button, .links .go', (el) => {
+    MO.press('.btn, .chip, .copy, .burger, .midx button, .links .go, .mci, .st a', (el) => {
       anim(el, { scale: 0.95 }, { type: 'spring', stiffness: 700, damping: 30 });
       return () => anim(el, { scale: 1 }, { type: 'spring', stiffness: 520, damping: 14 });
     });

@@ -1167,7 +1167,7 @@ export default function Home() {
             <blockquote>
               <p className="pq">
                 “We didn’t just want to make waffles.<br className="br-desk" />
-                We wanted to make people smile -<br className="br-desk" />
+                We wanted to make people smile,<br className="br-desk" />
                 One golden, crispy bite at a time.”
               </p>
             </blockquote>
