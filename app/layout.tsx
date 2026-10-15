@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://theswisswaffle.co"),
-  title: "The Swiss Waffle Co.",
+  title: "The Swiss Waffle Co. — Layered Swissfully",
   description:
     "Layered Swissfully. Two crisp waffle halves with a molten filling, cut into a wedge and served warm in Lucknow until 2 a.m.",
   icons: {
@@ -11,10 +11,35 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "The Swiss Waffle Co.",
+    locale: "en_IN",
+    url: "https://theswisswaffle.co",
+    siteName: "The Swiss Waffle Co.",
+    title: "The Swiss Waffle Co. — Layered Swissfully",
     description:
       "Layered Swissfully. Two crisp waffle halves with a molten filling, cut into a wedge and served warm in Lucknow until 2 a.m.",
-    images: ["/assets/img/og-image.jpg"],
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Swiss Waffle Co.",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Swiss Waffle Co. — Layered Swissfully",
+    description:
+      "Layered Swissfully. Two crisp waffle halves with a molten filling, cut into a wedge and served warm in Lucknow until 2 a.m.",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Swiss Waffle Co.",
+      },
+    ],
   },
 };
 

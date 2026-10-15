@@ -1158,7 +1158,7 @@ export default function Home() {
           <div id="founders" style={{ position: "absolute", top: 0, left: 0 }} aria-hidden="true" />
           <header className="f-head">
             <h2 id="f-h" className="h2 f-names">
-              Ankit Agarwal &amp; Paridhi Bathwal
+              Ankit &amp; Paridhi
             </h2>
             <p className="f-role">Founders and Chief Swaffle Officers</p>
           </header>
